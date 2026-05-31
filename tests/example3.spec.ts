@@ -64,4 +64,3 @@ test("Title1", ()=>{
 // 2. xpath - 3
 // 3. Playwright getBy locators - 1
 
-

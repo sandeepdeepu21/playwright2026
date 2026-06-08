@@ -285,3 +285,6 @@ page.getByRole('button', {name: 'Submit'})
 
 // Dynamic table xpath where rows and columns keeps chaning upon the refresh
 //tr[td[text()='System']]/td[count(//th[text()='CPU (%)']/preceding-sibling::th)+1]
+
+// Alert
+// Multiple windows

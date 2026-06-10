@@ -26,7 +26,7 @@ By using tag - iframe
 
 import {test, expect} from '@playwright/test'
 
-test.only("Handling frames", async function({page}){
+test("Handling frames", async function({page}){
     await page.goto("https://demo.automationtesting.in/Frames.html")
 
     // frameLocator() - Which helps us in entering inside the iframe to select the elements
@@ -49,6 +49,7 @@ test.only("Handling frames", async function({page}){
 
     // Go back to the previous page - goback()
     await page.goBack()
+    // await page.goForward()
 
     await page.getByText("Iframe with in an Iframe", {exact:true}).click()
 
@@ -59,3 +60,9 @@ test.only("Handling frames", async function({page}){
 
 
 })
+
+// Upload the files
+// Download file
+// Calendar
+// E2E - scenario
+

@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Praveenroy05/PWTSMay26#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.2"
   }
 }

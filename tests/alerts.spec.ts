@@ -4,9 +4,9 @@
 // 2. Confirm alert - Yes/No, Submit/Cancel
 // 3. Prompt alert - Along with Yes/No - Input box as well
 
-// dialog event - alert
-// popup event - Child window/tab/page
-// download event - File download
+// "dialog" event - alert
+// "popup" event - Child window/tab/page
+// "download" event - File download
 
 import {test, expect} from '@playwright/test'
 

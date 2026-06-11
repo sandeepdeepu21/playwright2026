@@ -51,6 +51,6 @@ test("Handling calendar", async ({page})=>{
 
     await page.waitForTimeout(2000)
 
-
-
 })
+
+// codegen - Code generation

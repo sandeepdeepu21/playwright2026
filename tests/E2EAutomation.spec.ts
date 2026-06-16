@@ -5,7 +5,7 @@ let password = ""
 let country = " Singapore"
 let productName = "iphone 13 pro"
 
-test.only("E2E automation scenario", async ({page})=>{
+test("E2E automation scenario", async ({page})=>{
     await page.goto("https://rahulshettyacademy.com/client")
 
     await page.getByPlaceholder("email@example.com").fill(email)
@@ -64,9 +64,32 @@ test.only("E2E automation scenario", async ({page})=>{
 
     const orderText = await page.locator(".em-spacer-1 .ng-star-inserted").textContent()
 
-    const orderID = orderText?.replaceAll("|"," ").trim()
+    const orderID = orderText!.replaceAll("|"," ").trim()
     console.log(orderID)
 
+    await page.locator("[routerlink='/dashboard/myorders']").first().click()
+    await expect(page.locator("table tbody")).toBeVisible()
+
+    // Table - Combination of rows and columns
+        // thead - Table Heading
+        // tbody - Table body - Which will consists of all the data inside the table
+            // tr - Table row
+                //td - Table definition - Table Column
+
+
+    const rows = page.locator("table tbody tr")
+    const rowCount = await rows.count()
+
+    for(let i=0; i<rowCount; i++){
+        const orderText = await rows.nth(i).locator("th").textContent()
+
+        if(orderText === orderID){
+            await rows.nth(i).locator("button").first().click()
+            break
+        }
+    }
+
+    await expect(page.locator("div.col-text")).toHaveText(orderID!)
 
 
 

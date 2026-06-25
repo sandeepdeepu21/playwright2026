@@ -55,13 +55,15 @@ const obj = new ClassName(10,15, 20, 40)
 
 
 
+
+
 }
 
 
 
 */
 
-class Employee{
+export class Employee{
 
     empId: number 
     empName: string

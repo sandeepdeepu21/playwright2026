@@ -1,16 +1,37 @@
 // Locators and methods related to Login Page
 
-import { Locator } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
-class LoginPage{
+export class LoginPage{
 
-    // email: Locator
-    // password: Locator
-    // loginBtn: Locator
+    // Locators  - Properties
 
-    // constructor(){
-    //     this.email = ...LoginPage.
-    // }
+    page: Page
+    private email :Locator 
+    private password: Locator
+    private loginBtn: Locator
+    errorMessage : Locator
+    homePageIdentifer : Locator
 
-    loginIntoApplication(){}
+    constructor(page:Page){
+        this.page = page 
+        this.email = this.page.getByPlaceholder("email@example.com") 
+        this.password = this.page.getByPlaceholder("enter your passsword")
+        this.loginBtn = this.page.locator("#login")
+        this.errorMessage = this.page.locator("#toast-container")
+        this.homePageIdentifer = this.page.locator("[routerlink='/dashboard/']")
+    }
+
+    // Methods
+
+    async launchURL(url:string){
+        await this.page.goto(url)
+    }
+
+    async loginIntoApplication(username:string, passsword: string){
+        await this.email.fill(username)
+        await this.password.fill(passsword)
+        await this.loginBtn.click()
+    }
+
 }

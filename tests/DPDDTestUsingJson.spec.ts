@@ -19,7 +19,7 @@ test.beforeEach(async ({page})=>{
 // parameterization of the test case
 
 
-    test(`Search and add the product to the cart for ${product.productName}`, {tag:'@smoke'},async ()=>{
+    test(`Search and add the product to the cart for ${product.productName}`,async ()=>{
     
     await dp.searchProduct(product.productName, 1)
     await expect(dp.addToCartMessage).toHaveText(product.successMessage)

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fullTest":"npx playwright test",
+    "fullTest": "npx playwright test",
     "smokeTest": "npx playwright test -g @smoke",
     "regressionTest": "npx playwright test -g @regression",
-    "lpTest" : "npx playwright test tests/LoginPageTest.spec.ts"
+    "lpTest": "npx playwright test tests/LoginPageTest.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,9 @@
   "homepage": "https://github.com/Praveenroy05/PWTSMay26#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.2"
+    "@types/node": "^25.9.2",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2",
+    "xlsx": "^0.18.5"
   }
 }

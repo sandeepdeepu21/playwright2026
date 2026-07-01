@@ -40,8 +40,11 @@ test("Search and view product details", {tag: ['@smoke', '@regression']}, async 
 // 1. Object - {name: "Rahul"}
 // 2. JSON - DD using Json
 // 3. Excel - DD
-// 4. .env - qa.env, prod.env
 // 5. Allure
+
+// 4. .env - qa.env, prod.env
+
+
 // 6. Jenkins
 
 // 7. MCP - AI
